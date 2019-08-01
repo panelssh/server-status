@@ -1,0 +1,14 @@
+{
+	"servers":
+	[
+		{
+			"server_id": "1",
+			"nameserver": "Panel SSH",
+			"hostname": "server.panelssh.com",
+			"location": "Indonesian",
+			"username": "test",
+			"password": "1234",
+			"custom": ""
+		}
+	]
+}
