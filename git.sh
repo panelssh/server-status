@@ -53,6 +53,9 @@ case $1 in
         get_repository $2 $4
         git_push $5
     ;;
+    push)
+        git_push $2 $3
+    ;;
     remove)
         remove_git
     ;;

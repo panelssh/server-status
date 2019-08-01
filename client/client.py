@@ -6,8 +6,6 @@ import subprocess
 import json
 import os
 import re
-import math
-import string
 import time
 import socket
 SERVER = "status.sshpanel.me"
@@ -18,13 +16,11 @@ INTERVAL = 5  # Update interval
 
 
 def get_uptime():
-    f = open('/proc/uptime', 'r')
-    uptime = f.readline()
-    f.close()
+    f_open = open('/proc/uptime', 'r')
+    uptime = f_open.readline()
+    f_open.close()
     uptime = uptime.split('.', 2)
-    time = int(uptime[0])
-    return int(time)
-
+    return int(uptime[0])
 
 def get_memory():
     re_parser = re.compile(r'^(?P<key>\S*):\s*(?P<value>\d*)\s*kB')
@@ -55,7 +51,7 @@ def get_hdd():
 
 
 def get_load():
-    return int(open("/proc/loadavg").next().split()[3].split('/')[0])
+    return os.getloadavg()[0]
 
 
 def get_time():
