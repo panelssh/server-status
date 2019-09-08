@@ -9,7 +9,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: go to server
-      run: cd server
     - name: make
-      run: make
+      run: cd server && make
