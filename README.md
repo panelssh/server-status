@@ -1,5 +1,7 @@
 # Server Status - Panel SSH
 
+![](https://github.com/panelssh/server-status/workflows/build/badge.svg)
+
 This repository is a rewrite of  [BotoX](https://github.com/BotoX) [ServerStatus](https://github.com/BotoX/ServerStatus) script.
 
 ## Installation
