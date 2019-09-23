@@ -1,0 +1,17 @@
+name: build
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04]
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Make
+      run: cd server && make
