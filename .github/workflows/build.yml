@@ -14,4 +14,5 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@master
     - name: Make
-      run: cd server && make
+      run: make
+      working-directory: ./server
